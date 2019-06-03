@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { observer, inject } from 'mobx-react'
 
-import '../../App.css'
+import '../../assets/App.css'
 import {Link} from "@reach/router"
 interface Props {
   mbx_appstore: {

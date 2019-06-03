@@ -3,7 +3,7 @@ import { observer, inject } from 'mobx-react'
 import { autorun } from 'mobx'
 import logo from '../../logo.svg'
 import mobx from '../../mobx.svg'
-import '../../App.css'
+import '../../assests/App.css'
 import {Link} from "@reach/router"
 interface Props {
   mbx_appstore: {
