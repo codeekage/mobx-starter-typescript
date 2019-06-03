@@ -3,7 +3,8 @@ import { observer, inject } from 'mobx-react'
 import { autorun } from 'mobx'
 import logo from '../../logo.svg'
 import mobx from '../../mobx.svg'
-
+import '../../App.css'
+import {Link} from "@reach/router"
 interface Props {
   mbx_appstore: {
     getAppName: string
@@ -29,6 +30,11 @@ export default class Home extends Component<Props> {
     return (
       <div className="App">
         <header className="App-header">
+          <div style={{display: "inline-block"}}>
+          <Link to="/about">About</Link>
+          { ' | ' }
+          <Link to="/contact">Contact </Link>
+          </div>
           <h1>{this.props.mbx_appstore.getAppName}</h1>
           <div style={{ display: 'inline-block' }}>
             <img src={logo} className="App-logo" alt="react-logo" />
@@ -37,6 +43,7 @@ export default class Home extends Component<Props> {
           <p>
             Edit Application Name by Typing in the Box Below!
           </p>
+        
           <a
             className="App-link"
             href="https://reactjs.org"

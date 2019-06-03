@@ -1,11 +1,25 @@
 import React, { Component } from 'react'
+import { observer, inject } from 'mobx-react'
 
-export default class Contact extends Component {
-    render() {
-        return (
-            <div>
-                
-            </div>
-        )
-    }
+import '../../App.css'
+import {Link} from "@reach/router"
+interface Props {
+  mbx_appstore: {
+    getAppName: string
+    setAppName: Function
+  }
+}
+
+@inject('mbx_appstore')
+@observer
+export default class About extends Component<Props> {
+  render() {
+    return (
+      <div className="App">
+          <h1>App Name: {this.props.mbx_appstore.getAppName}</h1>
+          <h1>Contact Page</h1>
+          <Link to="..">Back</Link>
+      </div>
+    )
+  }
 }
