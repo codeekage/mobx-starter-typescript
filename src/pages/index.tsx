@@ -10,8 +10,8 @@ const Components: React.FC = (props: any) => (
     <SEO />
     <Router>
       <Home path="/" {...props} />
-      <About path="about" {...props}/>
-      <Contact  path="contact" {...props} />
+      <About path="about" {...props} />
+      <Contact path="contact" {...props} />
     </Router>
   </>
 )

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { observer, inject } from 'mobx-react'
 
 import '../../assets/App.css'
-import {Link} from "@reach/router"
+import { Link } from '@reach/router'
 interface Props {
   mbx_appstore: {
     getAppName: string
@@ -16,9 +16,9 @@ export default class About extends Component<Props> {
   render() {
     return (
       <div className="App">
-          <h1>App Name: {this.props.mbx_appstore.getAppName}</h1>
-          <h1>Contact Page</h1>
-          <Link to="..">Back</Link>
+        <h1>App Name: {this.props.mbx_appstore.getAppName}</h1>
+        <h1>Contact Page</h1>
+        <Link to="..">Back</Link>
       </div>
     )
   }
