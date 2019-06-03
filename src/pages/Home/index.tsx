@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import { observer, inject } from 'mobx-react'
 import { autorun } from 'mobx'
-import logo from '../../logo.svg'
-import mobx from '../../mobx.svg'
-import '../../assests/App.css'
+import logo from '../../assets/logo.svg'
+import mobx from '../../assets/mobx.svg'
+import '../../assets/App.css'
 import {Link} from "@reach/router"
 interface Props {
   mbx_appstore: {
@@ -17,6 +17,7 @@ interface Props {
 export default class Home extends Component<Props> {
   constructor(props: any) {
     super(props)
+    //see browser to wacth mobx updates
     autorun(() => console.log('AutoRun', this.props.mbx_appstore.getAppName))
     this.handleOnChange = this.handleOnChange.bind(this)
   }
